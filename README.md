@@ -1,4 +1,4 @@
-# LDIF to CSV Conversion Tool
+# Simple tool to convert LDIF to CSV
 
 This tool converts LDIF files to CSV format and allows for changing delimiters and separators. 
 
