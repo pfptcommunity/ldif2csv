@@ -35,7 +35,7 @@ def generate_csv(ldif_attributes: List[str], filename: str, output: str, delimit
 
 def main():
     if len(sys.argv) == 1:
-        print('ldif2csv [-h] --input <filename> [--output <filename>] [--field-sep <sep>] [--delim <delim>]')
+        print('ldif2csv [-h] --input <filename> [--output <filename>] [--separator <sep>] [--delimeter <delim>]')
         exit(1)
 
     parser = argparse.ArgumentParser(prog="ldif2csv",
