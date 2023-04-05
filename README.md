@@ -15,7 +15,7 @@ pip install git+https://github.com/pfptcommunity/ldif2csv.git
 ### Usage
 
 ```
-usage: ldif2csv [-h] -i <filename> -o <filename> [-s <sep>] [-d <delim>]
+ldif2csv [-h] --input <filename> [--output <filename>] [--separator <sep>] [--delimeter <delim>]
 
 Tool to convert LDIF to CSV
 
