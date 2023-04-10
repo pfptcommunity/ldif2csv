@@ -67,5 +67,5 @@ def main():
 
 
 # Main entry point of program
-if (__name__ == '__main__'):
+if __name__ == '__main__':
     main()
