@@ -8,9 +8,17 @@ This tool converts LDIF files to CSV format and allows for changing delimiters a
 * ldif
  
 ### Installing the Package
-You can install the API library using the following command. 
+
+You can install the tool using the following command directly from Github.
+
 ```
 pip install git+https://github.com/pfptcommunity/ldif2csv.git
+```
+
+or can install the tool using pip.
+
+```
+pip install ldif2csv
 ```
 
 ### Usage
