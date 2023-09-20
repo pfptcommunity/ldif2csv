@@ -5,6 +5,7 @@ This tool converts LDIF files to CSV format and allows for changing delimiters a
 ### Requirements:
 
 * Python 3.9+
+* ldif
  
 ### Installing the Package
 You can install the API library using the following command. 

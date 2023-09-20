@@ -1,3 +1,26 @@
 [build-system]
-requires=['setuptools']
+requires=['setuptools', 'setuptools-scm']
 build-backend="setuptools.build_meta"
+
+[tools.setuptools.packages.find]
+where = ["src"]
+
+[project]
+name = "ldif2csv"
+version = "1.0.0"
+readme = "README.md"
+description = "Conversion tool for LDIF to CSV"
+license = { text = "MIT" }
+requires-python = ">3.9"
+dependencies = [
+    'ldif'
+]
+
+[project.urls]
+repository = "https://github.com/pfptcommunity/ldif2csv"
+#homepage = "https://github.com/pfptcommunity/ldif2csv"
+#documentation = "https://github.com/pfptcommunity/ldif2csv"
+#changelog = "https://github.com/pfptcommunity/ldif2csv"
+
+[project.scripts]
+ldif2csv = "ldif2csv:main"
