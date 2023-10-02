@@ -6,10 +6,16 @@ from typing import Dict, List
 from ldif import LDIFParser
 
 
+class LDIFParserNoError(LDIFParser):
+    # Remove annoying warnings
+    def _error(self, msg):
+        if self._strict:
+            raise ValueError(msg)
+
 def get_ldif_attributes(filename) -> List:
     attributes = set()
     with open(filename, "rb") as ldif_file:
-        parser = LDIFParser(ldif_file, strict=False)
+        parser = LDIFParserNoError(ldif_file, strict=False)
         for dn, record in parser.parse():
             attributes = (attributes | set(record.keys()))
         ldif_file.close()
@@ -21,7 +27,7 @@ def get_ldif_attributes(filename) -> List:
 def generate_csv(ldif_attributes: List[str], filename: str, output: str, delimiter: str, separator: str):
     # Open the LDIF file for reading
     with open(filename, "rb") as ldif_file:
-        parser = LDIFParser(ldif_file, strict=False)
+        parser = LDIFParserNoError(ldif_file, strict=False)
         with open(output, 'w', newline='', encoding='utf-8-sig') as report_file:
             csvwriter = csv.DictWriter(report_file, fieldnames=ldif_attributes, extrasaction='ignore', delimiter=delimiter)
             csvwriter.writeheader()
