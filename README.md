@@ -1,5 +1,5 @@
 # Simple tool to convert LDIF to CSV
-
+[![PyPI Downloads](https://static.pepy.tech/badge/ldif2csv)](https://pepy.tech/projects/ldif2csv)  
 This tool converts LDIF files to CSV format and allows for changing delimiters and separators. 
 
 ### Requirements:
